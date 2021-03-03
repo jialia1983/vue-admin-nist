@@ -14,45 +14,49 @@
 </template>
 
 <script>
-import Step1 from './Step1'
-import Step2 from './Step2'
-import Step3 from './Step3'
+    import Step1 from './Step1'
+    import Step2 from './Step2'
+    import Step3 from './Step3'
 
-export default {
-  name: 'StepForm',
-  i18n: require('./i18n'),
-  components: {Step1, Step2, Step3},
-  data () {
-    return {
-      current: 0
+    export default {
+        name: 'StepForm',
+        i18n: require('./i18n'),
+        components: {
+            Step1,
+            Step2,
+            Step3
+        },
+        data() {
+            return {
+                current: 0
+            }
+        },
+        computed: {
+            desc() {
+                return this.$t('pageDesc')
+            }
+        },
+        methods: {
+            nextStep() {
+                if (this.current < 2) {
+                    this.current += 1
+                }
+            },
+            prevStep() {
+                if (this.current > 0) {
+                    this.current -= 1
+                }
+            },
+            finish() {
+                this.current = 0
+            }
+        }
     }
-  },
-  computed: {
-    desc() {
-      return this.$t('pageDesc')
-    }
-  },
-  methods: {
-    nextStep () {
-      if (this.current < 2) {
-        this.current += 1
-      }
-    },
-    prevStep () {
-      if (this.current > 0) {
-        this.current -= 1
-      }
-    },
-    finish () {
-      this.current = 0
-    }
-  }
-}
 </script>
 
 <style lang="less" scoped>
-  .steps{
-    max-width: 950px;
-    margin: 16px auto;
-  }
+    .steps {
+        max-width: 950px;
+        margin: 16px auto;
+    }
 </style>

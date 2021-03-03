@@ -64,16 +64,16 @@ const options = {
                     },
                     component: PageView,
                     children: [{
-                            path: 'NewWork',
+                            path: 'step',
                             name: '发布工单',
                             component: () =>
-                                import ('@/pages/form/NewWork'),
+                                import ('@/pages/form/step'),
                         },
                         {
-                            path: 'step',
+                            path: 'NewWork',
                             name: '所有工单',
                             component: () =>
-                                import ('@/pages/form/step'),
+                                import ('@/pages/form/NewWork'),
                         },
                         {
                             path: 'advance',
