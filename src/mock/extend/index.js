@@ -54,6 +54,7 @@ const goods = ['运动鞋', '短裤', 'T恤', '七分裤', '风衣', '寸衫']
 
 Random.extend({
   admin () {
+    // return this.pick(admins)
     return this.pick(admins)
   },
   welcome () {

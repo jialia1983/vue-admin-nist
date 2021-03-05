@@ -41,7 +41,6 @@
      </a-select>
   </a-form-item>
 
-
     <a-form-item
     :label="$t('metrics')"
     :labelCol="{span: 7}"

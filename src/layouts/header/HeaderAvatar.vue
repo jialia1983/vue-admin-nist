@@ -23,38 +23,43 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
-import {logout} from '@/services/user'
+    import {
+        mapGetters
+    } from 'vuex'
+    import {
+        logout
+    } from '@/services/user'
 
-export default {
-  name: 'HeaderAvatar',
-  computed: {
-    ...mapGetters('account', ['user']),
-  },
-  methods: {
-    logout() {
-      logout()
-      this.$router.push('/login')
+    export default {
+        name: 'HeaderAvatar',
+        computed: {
+            ...mapGetters('account', ['user']),
+        },
+        methods: {
+            logout() {
+                logout()
+                this.$router.push('/login')
+            }
+        }
     }
-  }
-}
 </script>
 
 <style lang="less">
-  .header-avatar{
-    display: inline-flex;
-    .avatar, .name{
-      align-self: center;
+    .header-avatar {
+        display: inline-flex;
+        .avatar,
+        .name {
+            align-self: center;
+        }
+        .avatar {
+            margin-right: 8px;
+        }
+        .name {
+            font-weight: 500;
+        }
     }
-    .avatar{
-      margin-right: 8px;
+    
+    .avatar-menu {
+        width: 150px;
     }
-    .name{
-      font-weight: 500;
-    }
-  }
-  .avatar-menu{
-    width: 150px;
-  }
-
 </style>

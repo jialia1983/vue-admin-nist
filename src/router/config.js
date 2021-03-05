@@ -65,19 +65,19 @@ const options = {
                     component: PageView,
                     children: [{
                             path: 'step',
-                            name: '发布工单',
+                            name: '工单申请',
                             component: () =>
                                 import ('@/pages/form/step'),
                         },
                         {
                             path: 'NewWork',
-                            name: '所有工单',
+                            name: '我的待办',
                             component: () =>
                                 import ('@/pages/form/NewWork'),
                         },
                         {
                             path: 'advance',
-                            name: '我发布的',
+                            name: '我创建的',
                             component: () =>
                                 import ('@/pages/form/advance'),
                         },
@@ -86,19 +86,25 @@ const options = {
                             name: '我处理的',
                             component: () =>
                                 import ('@/pages/form/step'),
+                        },
+                        {
+                            path: 'test1',
+                            name: '所有工单',
+                            component: () =>
+                                import ('@/pages/form/step'),
                         }
                     ]
                 },
                 {
                     path: 'list',
-                    name: '配置管理',
+                    name: '系统管理',
                     meta: {
                         icon: 'table'
                     },
                     component: PageView,
                     children: [{
                             path: 'query',
-                            name: '查询表格',
+                            name: '用户管理',
                             meta: {
                                 authority: 'queryForm',
                             },
@@ -107,19 +113,19 @@ const options = {
                         },
                         {
                             path: 'primary',
-                            name: '标准列表',
+                            name: '角色管理',
                             component: () =>
                                 import ('@/pages/list/StandardList'),
                         },
                         {
                             path: 'card',
-                            name: '卡片列表',
+                            name: '部门管理',
                             component: () =>
                                 import ('@/pages/list/CardList'),
                         },
                         {
                             path: 'search',
-                            name: '搜索列表',
+                            name: '菜单管理',
                             component: () =>
                                 import ('@/pages/list/search/SearchLayout'),
                             children: [{
