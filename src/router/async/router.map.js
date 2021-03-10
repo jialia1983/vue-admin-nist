@@ -37,27 +37,39 @@ const routerMap = {
             import ('@/pages/dashboard/analysis')
     },
     form: {
-        name: '表单页',
+        name: '工单管理',
         icon: 'form',
         component: view.page
     },
     basicForm: {
-        path: 'NewWork',
-        name: '基础表单',
+        path: 'AddReceipts',
+        name: '工单申请',
         component: () =>
-            import ('@/pages/form/NewWork')
+            import ('@/pages/form/AddReceipts')
     },
     stepForm: {
-        path: 'step',
-        name: '分步表单',
+        path: 'MyPending',
+        name: '我的待办',
         component: () =>
-            import ('@/pages/form/step')
+            import ('@/pages/form/MyPending')
     },
     advanceForm: {
-        path: 'advance',
-        name: '高级表单',
+        path: 'MyCreate',
+        name: '我创建的',
         component: () =>
-            import ('@/pages/form/advance')
+            import ('@/pages/form/MyCreate')
+    },
+    MyDealingForm: {
+        path: 'MyDealing',
+        name: '我处理的',
+        component: () =>
+            import ('@/pages/form/MyCreate')
+    },
+    DisposeForm: {
+        path: 'All',
+        name: '所有工单',
+        component: () =>
+            import ('@/pages/form/MyCreate')
     },
     list: {
         name: '列表页',

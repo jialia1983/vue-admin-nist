@@ -64,34 +64,34 @@ const options = {
                     },
                     component: PageView,
                     children: [{
-                            path: 'step',
+                            path: 'AddReceipts',
                             name: '工单申请',
                             component: () =>
-                                import ('@/pages/form/step'),
+                                import ('@/pages/form/AddReceipts'),
                         },
                         {
-                            path: 'NewWork',
+                            path: 'MyPending',
                             name: '我的待办',
                             component: () =>
-                                import ('@/pages/form/NewWork'),
+                                import ('@/pages/form/MyPending'),
                         },
                         {
-                            path: 'advance',
+                            path: 'MyCreate',
                             name: '我创建的',
                             component: () =>
-                                import ('@/pages/form/advance'),
+                                import ('@/pages/form/MyCreate'),
                         },
                         {
-                            path: 'test',
+                            path: 'MyDealing',
                             name: '我处理的',
                             component: () =>
-                                import ('@/pages/form/step'),
+                                import ('@/pages/form/MyCreate'),
                         },
                         {
-                            path: 'test1',
+                            path: 'All',
                             name: '所有工单',
                             component: () =>
-                                import ('@/pages/form/step'),
+                                import ('@/pages/form/MyCreate'),
                         }
                     ]
                 },
@@ -256,7 +256,7 @@ const options = {
                         }
                     },
                     component: () =>
-                        import ('@/pages/form/NewWork')
+                        import ('@/pages/form/MyPending')
                 },
             ]
         },
