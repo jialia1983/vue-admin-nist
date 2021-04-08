@@ -41,19 +41,19 @@ const routerMap = {
         icon: 'form',
         component: view.page
     },
-    basicForm: {
+    AddReceiptsForm: {
         path: 'AddReceipts',
         name: '工单申请',
         component: () =>
             import ('@/pages/form/AddReceipts')
     },
-    stepForm: {
+    MyPendingForm: {
         path: 'MyPending',
         name: '我的待办',
         component: () =>
             import ('@/pages/form/MyPending')
     },
-    advanceForm: {
+    MyCreateForm: {
         path: 'MyCreate',
         name: '我创建的',
         component: () =>

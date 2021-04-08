@@ -81,9 +81,9 @@
                 this.form.validateFields((err) => {
                     if (!err) {
                         this.logging = true
-                        const name = this.form.getFieldValue('name')
-                        const password = this.form.getFieldValue('password')
-                        login(name, password).then(this.afterLogin)
+                        const identifier = this.form.getFieldValue('name')
+                        const credential = this.form.getFieldValue('password')
+                        login(identifier, credential).then(this.afterLogin)
                     }
                 })
             },
